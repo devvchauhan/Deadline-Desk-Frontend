@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Desk - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Deadline Desk</h1>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="add.html">Add Subject</a>
+            <a href="manage.html">Manage</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Pomodoro Timer Widget -->
+        <div class="pomodoro-widget">
+            <h2>Pomodoro Timer</h2>
+            <div class="pomodoro-display" id="pomodoro-time">25:00</div>
+            <button id="pomodoro-start">Start</button>
+            <button id="pomodoro-pause">Pause</button>
+            <button id="pomodoro-reset">Reset</button>
+        </div>
+
+        <!-- Dashboard Stats -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <h3>Total Subjects</h3>
+                <div class="value" id="stat-total">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Done</h3>
+                <div class="value" id="stat-done">0</div>
+            </div>
+            <div class="stat-card">
+                <h3>Pending</h3>
+                <div class="value" id="stat-pending">0</div>
+            </div>
+        </div>
+
+        <div id="message-container" class="message"></div>
+
+        <!-- Subject Cards -->
+        <h2>Your Subjects</h2>
+        <div class="cards-container" id="subjects-container">
+            <!-- Cards appended here using DOM manipulation -->
+        </div>
+    </div>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

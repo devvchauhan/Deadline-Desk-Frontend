@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deadline Desk - Add Subject</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <h1>Deadline Desk</h1>
+        <div class="nav-links">
+            <a href="index.html">Dashboard</a>
+            <a href="add.html">Add Subject</a>
+            <a href="manage.html">Manage</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Add New Subject</h2>
+        <div class="form-container">
+            <div id="message-container" class="message"></div>
+            
+            <form id="add-subject-form">
+                <div class="form-group">
+                    <label for="name">Subject Name</label>
+                    <input type="text" id="name" placeholder="e.g. Mathematics">
+                    <span id="name-error" class="inline-error" style="display:none;"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="deadline">Deadline</label>
+                    <input type="date" id="deadline">
+                    <span id="deadline-error" class="inline-error" style="display:none;"></span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="">Select priority</option>
+                        <option value="high">High</option>
+                        <option value="medium">Medium</option>
+                        <option value="low">Low</option>
+                    </select>
+                    <span id="priority-error" class="inline-error" style="display:none;"></span>
+                </div>
+                
+                <button type="submit">Add Subject</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/add.js"></script>
+</body>
+</html>

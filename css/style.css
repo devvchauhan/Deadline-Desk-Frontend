@@ -1,0 +1,219 @@
+:root {
+  --primary: #5046e5;
+  --danger: #ef4444;
+  --success: #22c55e;
+  --warning: #f97316;
+  --bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* Navbar */
+.navbar {
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+.nav-links a:hover { opacity: 0.8; }
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* Dashboard Stats */
+.stats-bar {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.stat-card {
+  background: var(--card-bg);
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  text-align: center;
+}
+.stat-card h3 {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1rem;
+}
+.stat-card .value {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+/* Cards Section */
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+.subject-card {
+  background: var(--card-bg);
+  flex: 1 1 calc(33.333% - 1.5rem);
+  min-width: 280px;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.subject-card h3 { margin: 0 0 1rem 0; font-size: 1.25rem; }
+.subject-card p { margin: 0.5rem 0; font-size: 0.875rem; }
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: white;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+.priority-high { background-color: var(--danger); }
+.priority-medium { background-color: var(--warning); }
+.priority-low { background-color: var(--success); }
+
+.status-pending { background-color: #6b7280; } /* gray */
+.status-done { background-color: var(--success); }
+
+.due-soon {
+  color: var(--danger);
+  font-weight: bold;
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  display: block;
+}
+
+/* Pomodoro Timer */
+.pomodoro-widget {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.pomodoro-display {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 1rem 0;
+  font-family: monospace;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  transition: opacity 0.2s;
+}
+button:hover { opacity: 0.9; }
+
+/* Forms */
+.form-container {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+/* Messages */
+.message {
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  display: none;
+}
+.message.success {
+  background-color: #d1fae5;
+  color: #065f46;
+  display: block;
+}
+.message.error {
+  background-color: #fee2e2;
+  color: #991b1b;
+  display: block;
+}
+.inline-error {
+  color: var(--danger);
+  font-size: 0.875rem;
+  display: block;
+  margin-top: 0.25rem;
+}
+
+/* Edit Form */
+.edit-form {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .stats-bar {
+    flex-direction: column;
+  }
+  .subject-card {
+    flex: 1 1 100%;
+  }
+}
