@@ -1,4 +1,4 @@
-const BASE_URL = "http://127.0.0.1:5000";
+const BASE_URL = "https://deadline-desk-backend.onrender.com";
 
 // --- Pomodoro Timer Logic ---
 let pomodoroInterval = null;
